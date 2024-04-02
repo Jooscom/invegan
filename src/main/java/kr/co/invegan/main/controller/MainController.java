@@ -64,15 +64,7 @@ public class MainController {
 		return "main/header";
 	}
 
-	
-	
-	
-	/*
-	@RequestMapping(value = "/main/footer")
-	public String mainFooter(Model model) {
-		return "main/footer";
-	}
-	*/
+
 }
 
 

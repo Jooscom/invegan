@@ -670,7 +670,7 @@ input[name="password"] {
 	 	<c:set var="myPageImg" value="${dto.profile_image}" />
 	 	<c:choose>
 		    <c:when test="${not empty myPageImg}">
-		        <img src="/photo/${myPageImg}" width="180" height="220" class="myPageImg">
+		        <img src="/photo/invegan/${myPageImg}" width="180" height="220" class="myPageImg">
 		    </c:when>
 		    <c:otherwise>
 		        <img src="/invegan/resources/main/profile.jpg" width="180" height="220" class="myPageImg">
@@ -678,7 +678,7 @@ input[name="password"] {
 		</c:choose>
 		<div class="profile-vertical-line"></div>	<!-- 가로선 -->
 	  	<%-- <div class="myPageImg">
-	        <img src="/photo/${myPageImg}" width="180" height="220">
+	        <img src="/photo/invegan/${myPageImg}" width="180" height="220">
 	    </div> --%>
 	    
 		<%-- 도훈이 주석	 
@@ -845,7 +845,7 @@ input[name="password"] {
         <hr>
         	<c:choose>
 			    <c:when test="${not empty myPageImg}">
-			        <img src="/photo/${myPageImg}" id= updateImg width="150" height="150">
+			        <img src="/photo/invegan/${myPageImg}" id= updateImg width="150" height="150">
 			    </c:when>
 			    <c:otherwise>
 		       		<img src="/invegan/resources/main/profile.jpg" id= updateImg width="150" height="150">
@@ -1392,11 +1392,11 @@ function drawList(list) {
     	
     	content += '<div class="feedDiv">';
     	 if (image != '') {
-             content += '<div class="profile"><img src="/photo/' + image+ '" alt="image">'+item.nickname+'</div>';
+             content += '<div class="profile"><img src="/photo/invegan/' + image+ '" alt="image">'+item.nickname+'</div>';
          } else {
              content += '<div class="profile"><img src="/invegan/resources/main/profile.jpg">'+item.nickname+'</div>';
          }
-        content += '<div class="feedImage"><img src="/photo/' + item.server_file_name + '" alt="image" id="feedImg"></div>';
+        content += '<div class="feedImage"><img src="/photo/invegan/' + item.server_file_name + '" alt="image" id="feedImg"></div>';
         content += '<div class="itemContent">' + shortenedContent + '</div>';
 
          content += '</div>';
@@ -1459,11 +1459,11 @@ function drawFcList(fcmList) {
     	
     	content += '<div class ="fCDiv">';
     	 if (item.profile_image != null) {
-             content += '<div class="profile"><img src="/photo/' + item.profile_image + '" alt="image">'+item.nickname+'</div>';
+             content += '<div class="profile"><img src="/photo/invegan/' + item.profile_image + '" alt="image">'+item.nickname+'</div>';
          } else {
              content += '<div class="profile"><img src="/invegan/resources/main/profile.jpg">'+item.nickname+'</div>';
          }
-        content += '<div class="fCImage"><img src="/photo/' + item.server_file_name + '" alt="image" id="fCImg"></div>';
+        content += '<div class="fCImage"><img src="/photo/invegan/' + item.server_file_name + '" alt="image" id="fCImg"></div>';
         content += '<div class="itemContent">' + shortenedContent + '</div>';
 
         content += '</div>';
@@ -1505,7 +1505,7 @@ function drawRtCmList(rtCmList) {
         content += '<div class="rtCmDiv">';
 
         content += '<div class="title">' + item.title + '</div>';
-        content += '<div class="favImg"><a href="/invegan/restaurant/detail?post_id=' + item.post_id + '"><img src="/photo/' + item.server_file_name + '" alt="image" class="restaurantPhoto"></div>';
+        content += '<div class="favImg"><a href="/invegan/restaurant/detail?post_id=' + item.post_id + '"><img src="/photo/invegan/' + item.server_file_name + '" alt="image" class="restaurantPhoto"></div>';
 
         content += '</div>';
     });
@@ -1549,7 +1549,7 @@ function drawFavList(favList) {
         content += '<div class="favDiv">';
 
         content += '<div class="title">' + item.title + '</div>';
-        content += '<div class="favImg"><a href="/invegan/restaurant/detail?post_id=' + item.post_id + '"><img src="/photo/' + item.server_file_name + '" alt="image" id="restaurantPhoto"></div>';
+        content += '<div class="favImg"><a href="/invegan/restaurant/detail?post_id=' + item.post_id + '"><img src="/photo/invegan/' + item.server_file_name + '" alt="image" id="restaurantPhoto"></div>';
 
         content += '</div>';
     });

@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <!-- alert ,cofirm 창 -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <style>
 .container{
 	width: 1000px;
@@ -25,7 +26,9 @@
 }
 #signup-img, #signup-box, h2{
     display: inline-block;
-    margin: 24px 7px
+    margin: 24px 7px;
+    background-color: white;
+
 }
 #signup-img img{
 	opacity: 0.7;
@@ -34,8 +37,9 @@
 }
 #signup-box{
 	position: absolute;
-    top: 177px;
-    right: 235px;
+	top: 177px;
+	right: 235px;
+
 }
 #signup-form{
 	position: relative;
@@ -93,6 +97,7 @@ input[type="radio"]:hover + p {
 	width: 95px;
 	border: none;
 	font-weight: 600;
+	font-size: 15px;
 }
 .box:hover{
 	cursor: pointer;
@@ -109,16 +114,15 @@ option{
 .signup-gender p{
 	margin: 0;
 	display: inline-block;
+	font-size: 15px;
 }
 
-/* table, tr, td {
-	border: 1px solid black;
-} */
 #validateId{
 	border: none;
 	background: none;
 	cursor: pointer;
 	font-weight: 600;
+	font-size: 15px;
 }
 #validateId:hover{
 	color:#95df95;
@@ -147,7 +151,9 @@ option{
     top: -98px;
     right: 16px;
 }
-
+#id, #pw, #pwchk, #nickname{
+	width: 215px;
+}
 
 </style>
 </head>
@@ -158,30 +164,32 @@ option{
 			<img alt="deco-img" src="<c:url value='/resources/main/signup-src.png'/>">
 		</div>
 		<div id="signup-box">
-			<label class="join-title">JOIN US</label>
+			<p class="join-title">JOIN US</p>
 			<form action="signup.do" method="post" style="white-space: nowrap;">
 				<table id="signup-form">
 					<tr>
-						<th>아이디</th>
-						<td><input type="text" required name="id" id="id" />
+						<th><label for="id">아 이 디</label></th>
+						<td>
+							<input type="text" required name="id" id="id" />
 							<button id="validateId" class="idTrueFalse" type="button">중복체크</button>
-							</td>
-					</tr>
-	
-					<tr>
-						<th><label for="password">비밀번호</label></th>
-						<td><input id="pw" type="password" name="pw"
-							required maxlength="10" autocomplete="off" placeholder="최대 10자 까지"/></td>
+						</td>
 					</tr>
 					<tr>
-						<th><label for="passwordchk">비밀번호 확인</label></th>
-						<td><input id="pwchk" type="password"
-							name="pw_chk" placeholder="동일하게 입력해주세요." required maxlength="10"
-							autocomplete="off" /></td>
+						<th><label for="pw">비밀번호</label></th>
+						<td>
+							<input id="pw" type="password" name="pw"
+								required maxlength="10" autocomplete="off" placeholder="최대 10자 까지"/>
+						</td>
 					</tr>
-	
 					<tr>
-						<th>이메일</th>
+						<th><label for="pwchk">비밀번호 확인</label></th>
+						<td>
+							<input id="pwchk" type="password"	name="pw_chk" placeholder="동일하게 입력해주세요." 
+								required maxlength="10" autocomplete="off" />
+						</td>
+					</tr>
+					<tr>
+						<th><label for="email-id">이 메 일</label></th>
 						<td>
 							<input id="result_email" name="email" type="hidden"/>
 							<input id="email-id" class="box"  type="text" value=""/>@ 
@@ -198,8 +206,9 @@ option{
 						</td>
 					</tr>
 					<tr>
-						<th>닉네임</th>
-						<td colspan="2"><input type="text" name="nickname" required />
+						<th><label for="nickname">닉 네 임</label></th>
+						<td colspan="2">
+							<input type="text" id="nickname" name="nickname" required />
 						</td>
 					</tr>
 					<tr>
@@ -212,13 +221,13 @@ option{
 							<select id="birthMonth" class="box">
 								<option value="" disabled selected>월</option>
 							</select>
-							<select id="birthDay" class="box"dddddvc>
+							<select id="birthDay" class="box">
 								<option value="" disabled selected>일</option>
 							</select>
 						</td>
 					</tr>
 					<tr>
-						<th>성별</th>
+						<th>성  별</th>
 						<td class="signup-gender">
 							<input type="radio" name="gender" value="남"checked /><p>남자</p>
 							<input type="radio" name="gender" value="여" /><p>여자</p>
@@ -260,7 +269,7 @@ option{
 						</td>
 					</tr>
 					<tr>
-						<th>관심사</th>
+						<th>관 심 사</th>
 						<td id="inter">
 							<input type="checkbox" name="interests" value="식당" id="interests1" /> 식당 
 							<input type="checkbox" name="interests" value="레시피" id="interest2" /> 레시피 
@@ -271,21 +280,9 @@ option{
 							<input type="checkbox" name="interests" value="일상" id="interests6" /> 일상
 						</td>
 					</tr>
-	
-	
-				<!-- 	<tr>
-						<td colspan="2" class="agree">
-							<input type="checkbox" name="agree" value="1" required /> 
-							<span>이용약관 동의</span><br/>
-							<input type="checkbox" name="agree" value="2" required /> 
-							<span>개인정보 수집, 이용 동의</span><br/>
-							<input type="checkbox" name="agree" value="3" required />
-							<span>개인정보 이용 동의</span><br/>
-						</td>				
-					</tr> -->
 					<tr>
 						<th colspan="3">
-							<input type="submit" id="submitBtn" value="JOIN" /> <!-- <input type="button" id="join" value="회원가입"/> -->
+							<input type="submit" id="submitBtn" value="JOIN" />
 						</th>
 					</tr>
 				</table>
@@ -319,8 +316,8 @@ option{
 	// 생일 년 옵션 생성
 	var currentDate = new Date();
 	var year = currentDate.getFullYear();
-	console.log('currentDate',currentDate);
-	console.log('year',year);
+	// console.log('currentDate',currentDate);
+	// console.log('year',year);
 	var idx =0;
 	for (var i = year; i >= (year - 100); i--) {
 		  var option = document.createElement("option");
@@ -396,8 +393,6 @@ option{
 		}
 	});
 	
-	
-	
 	// 서버로 보내기 전 데이터 가공
 	$("#submitBtn").on("click",function(event) {
 			var id = document.getElementById("id");
@@ -467,8 +462,6 @@ option{
 			}
 		}
 	
-	);
-		
-			
+	);		
 </script>
 </html>

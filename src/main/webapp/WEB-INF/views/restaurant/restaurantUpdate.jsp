@@ -180,7 +180,7 @@ $('#go_rest').css('box-shadow','#95df95 0px 2px 0px 0px');
 				
 				var img = new Image();
 				img.className = 'previewImg';
-				img.src = '/photo/'+photoArr[i];
+				img.src = '/photo/invegan/'+photoArr[i];
 				divTag.appendChild(img);
 			}
 		}else{

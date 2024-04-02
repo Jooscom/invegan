@@ -366,7 +366,7 @@ $(document).ready(function(){
               content += '<button class="btn btn-dark" id="next">다음</button>';
           }
           for (var i = 0; i < imageFiles.length; i++) {
-      	    var imageUrl = '/photo/' + imageFiles[i];
+      	    var imageUrl = '/photo/invegan/' + imageFiles[i];
       	    content += '<div class="post-wrapper">';
       	    content += '<div class="post-img-slider"><img class="pstimg" src="' + imageUrl + '" style="width: 500px; height: 500px;"> </div>'; // 여기에서 너비와 높이를 조정하세요
       	    content += '</div>';

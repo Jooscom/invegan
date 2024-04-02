@@ -90,7 +90,7 @@
 	<div class="profileContainer">
 
   	<div class="myPageImg">
-        <img src="/photo/${myPageImg}" width="200" height="200">
+        <img src="/photo/invegan/${myPageImg}" width="200" height="200">
     </div>
     
    	<div class="userInfo">

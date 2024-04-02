@@ -203,7 +203,7 @@ function drawList(data){
 			}
 		});
 		$('.restaurantDiv_1').eq(i).attr('post_id',restaurant.post_id);
-		$('.restaurantDiv_1').eq(i).find($('.Img')).attr('src','/photo/'+restaurant.server_file_name);
+		$('.restaurantDiv_1').eq(i).find($('.Img')).attr('src','/photo/invegan/'+restaurant.server_file_name);
 		$('.restaurantDiv_1').eq(i).find($('.res_title')).html(restaurant.title);
 		$('.restaurantDiv_1').eq(i).find($('.res_dist')).html('현재 위치와의 거리: '+restaurant.km+' Km');
 		$('.restaurantDiv_1').eq(i).find($('.veganType')).html(veganType);

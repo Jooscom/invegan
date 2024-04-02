@@ -317,7 +317,7 @@ function restaurantListView(idx){
 			$('.cFL_Res').eq(i).find($('.cFL_R_VT')).html('');
 		}else{
 			$('.cFL_Res').eq(i).attr('post_id',RFL[i+idx].post_id);
-			$('.cFL_Res').eq(i).find($('img')).attr('src', '/photo/'+RFL[i+idx].server_file_name);
+			$('.cFL_Res').eq(i).find($('img')).attr('src', '/photo/invegan/'+RFL[i+idx].server_file_name);
 			$('.cFL_Res').eq(i).find($('img')).attr('alt', RFL[i+idx].title);
 			$('.cFL_Res').eq(i).find($('.cFL_R_Name')).html(RFL[i+idx].title);
 			var veganArr = RFL[i+idx].vegan.split(',');
@@ -389,7 +389,7 @@ function feedListView(idx){
 			if(FFL[i+idx].profile_image==null){
 				$('.cFL_Feed').eq(i).find('.cFL_F_Head').find($('img')).attr('src', '<c:url value="/resources/main/profile.jpg"/>');
 			}else{
-				$('.cFL_Feed').eq(i).find('.cFL_F_Head').find($('img')).attr('src', '/photo/'+FFL[i+idx].profile_image);
+				$('.cFL_Feed').eq(i).find('.cFL_F_Head').find($('img')).attr('src', '/photo/invegan/'+FFL[i+idx].profile_image);
 			}
 			$('.cFL_Feed').eq(i).find('.cFL_F_Head').find($('p')).html(FFL[i+idx].nickname);
 			$('.cFL_Feed').eq(i).find('.cFL_F_Img').find($('img')).attr('alt', 'Feed Img(post_id:'+FFL[i+idx].post_id+')');
@@ -398,7 +398,7 @@ function feedListView(idx){
 			if(FFL[i+idx].server_file_name == null){
 				$('.cFL_Feed').eq(i).find('.cFL_F_Img').find($('img')).attr('src', '<c:url value="/resources/main/logo.png"/>');
 			}else{
-				$('.cFL_Feed').eq(i).find('.cFL_F_Img').find($('img')).attr('src', '/photo/'+FFL[i+idx].server_file_name);
+				$('.cFL_Feed').eq(i).find('.cFL_F_Img').find($('img')).attr('src', '/photo/invegan/'+FFL[i+idx].server_file_name);
 			}
 		}
 	}
@@ -436,7 +436,7 @@ $('#feedButtonR').on('click',function(){
 
 var clickImg = 0;
 $('.banner').on('click',function(){
-	var imgArr = ['invegan_source01.png','veganday.gif','vegan_type.jpeg','invegan_source03.jpg','signup-src.png','invegan_logo_master.png'];
+	var imgArr = ['invegan_source03.jpg','invegan_source01.png','veganday.gif','vegan_type.jpeg','signup-src.png','invegan_logo_master.png'];
 	var len = imgArr.length;
 	clickImg ++;
 	if(clickImg >= len){

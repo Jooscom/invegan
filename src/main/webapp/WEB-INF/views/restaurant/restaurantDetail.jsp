@@ -164,7 +164,7 @@
 			alt="favoriteIcon"/>
 	</div>
 	<div class="restaurantTop">
-		<div class="restaurantImg_main"><img id="img_main" src = "/photo/${photoList[0]}" alt="restaurantImg"/></div>
+		<div class="restaurantImg_main"><img id="img_main" src = "/photo/invegan/${photoList[0]}" alt="restaurantImg"/></div>
 		<div class="restaurantContent">
 			<div class="veganType"></div>
 			<h1>${restaurantDetail.getTitle()}</h1>			
@@ -297,7 +297,7 @@ function photoView(cnt){
 			
 			var img = new Image();
 			img.className = 'imgDetail';
-			var imgsrc = '/photo/'+photoArr[idx];
+			var imgsrc = '/photo/invegan/'+photoArr[idx];
 			console.log(imgsrc);
 			img.src = imgsrc;
 			divTag.appendChild(img);			

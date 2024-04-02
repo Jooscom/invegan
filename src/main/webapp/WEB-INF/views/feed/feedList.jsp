@@ -553,7 +553,7 @@ input[type="text"] {
 									
 									content += '<div class="post-header">';
 									var defaultImagePath = '/invegan/resources/main/profile.jpg';
-									var profileImagePath = item.profile_image ? '/photo/' + item.profile_image : defaultImagePath;
+									var profileImagePath = item.profile_image ? '/photo/invegan/' + item.profile_image : defaultImagePath;
 									content += '<div class="user-profile"><img src="' + profileImagePath + '"></div>'; // 사용자의 프로필 사진
 									content += '<span class="username">'+ item.nickname + '</span>';
 									content += '</div>';
@@ -561,7 +561,7 @@ input[type="text"] {
 									content += '<div class="post-image">';
 									content += '<a href="#" class="post-link" data-post-id="'+ item.post_id+ '" data-toggle="modal" data-target="#detailModal" style="display: block; width: 500px; height: 500px;">';
 									console.log(item.post_id);
-									content += '<img src="/photo/' + item.server_file_name + '" class="mainFeedPhoto">';
+									content += '<img src="/photo/invegan/' + item.server_file_name + '" class="mainFeedPhoto">';
 									content += '</a>';
 									content += '</div>';
 									content += '<div class="post-content"  style="width:500px">';

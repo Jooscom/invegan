@@ -4,13 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<!--  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
- 		<!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
-<!-- 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-       <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
-<!-- 	  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <style>
 
@@ -20,8 +14,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-
 
 
 * {
@@ -179,7 +171,7 @@ body::-webkit-scrollbar {
 		
 			<!-- 로그인 했을 때 -->
  			<c:if test="${not empty loginInfo}">
-				<p><img id="profileImg" src="/photo/${loginInfo.getProfile_img()}" /></p>
+				<p><img id="profileImg" src="/photo/invegan/${loginInfo.getProfile_img()}" /></p>
 				<p id="loginNickname">${loginInfo.getNickname()}</p>
 				<p id="loginId">( ${loginInfo.getId()} )</p>
 				<div class="infoMB">
