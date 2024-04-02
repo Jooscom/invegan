@@ -33,7 +33,10 @@
   식단을 기록하여 날짜별 섭취한 영양소와 칼로리 확인, 부족한 영양소와 칼로리 쉽게 확인
  
 # 아키텍처
-사진
+![aci](https://github.com/Jooscom/invegan/assets/136825137/26ac0423-37f9-4e41-9e37-3e185e56c33b)
+![erd_1](https://github.com/Jooscom/invegan/assets/136825137/024d00ef-bf57-491d-890c-ef7e858eec79)
+![erd_2](https://github.com/Jooscom/invegan/assets/136825137/d5563084-ac79-4fe1-b17c-fa74bfddd3c1)
+
 
 # 
 
