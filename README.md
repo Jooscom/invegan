@@ -29,18 +29,14 @@
 
 <br>
 
-## 아키텍처
-![architecture](https://github.com/Jooscom/invegan/assets/136825137/26ac0423-37f9-4e41-9e37-3e185e56c33b)
+>## 아키텍처
+![aci](https://github.com/Jooscom/invegan/assets/136825137/3bd10e23-b0c4-41e5-8439-71f33ec53765)
 
 <br>
 
-## ERD
-![erd](https://github.com/Jooscom/invegan/assets/136825137/024d00ef-bf57-491d-890c-ef7e858eec79)
+>## ERD
+![erd](https://github.com/Jooscom/invegan/assets/136825137/07f3d775-f2ee-43ba-9349-ae4eadfd1896)
+
 
 <br>
-
-# 담당 서비스
- - 사용자 맟춤 정보: 사용자의 위치에 따른 식당과의 거리, 비건 단계에 따른 식당 리스트 기능, 관심 분야에 따른 피드 기능
- - 식당 정보: 사용자 위치에서 가까운 식당 리스트, 작성, 수정, 상세보기 기능
-
 
