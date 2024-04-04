@@ -35,7 +35,8 @@
 <br>
 
 >## ERD
-![erd](https://github.com/Jooscom/invegan/assets/136825137/54309e76-d7ae-44b7-b062-1ebfc241061f)
+![erd](https://github.com/Jooscom/invegan/assets/136825137/07f3d775-f2ee-43ba-9349-ae4eadfd1896)
+
 
 <br>
 
