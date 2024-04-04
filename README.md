@@ -30,7 +30,7 @@
 <br>
 
 >## 아키텍처
-![aci](https://github.com/Jooscom/invegan/assets/136825137/cc04ea3d-5146-4460-80d9-452d25859a38)
+![aci](https://github.com/Jooscom/invegan/assets/136825137/3bd10e23-b0c4-41e5-8439-71f33ec53765)
 
 <br>
 
