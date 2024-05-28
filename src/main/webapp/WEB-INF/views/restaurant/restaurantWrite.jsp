@@ -87,6 +87,12 @@
 	.blank{
 		margin-bottom: 200px;
 	}
+	#restarunatWriteImg{
+		color: transparent;
+	}
+	#restaurantImg_cnt{
+		margin-right: 15px;
+	}
 </style>
 </head>
 <body>
@@ -120,7 +126,7 @@
 	
 	<tr>
 		<th class="restaurantWriteHead">사진 등록</th>
-		<td class="restaurantWriteCon"><input type="file" name="images" id="restarunatWriteImg" multiple="multiple"/></td>
+		<td class="restaurantWriteCon"><a id="restaurantImg_cnt">이미지 0개 등록</a><input type="file" name="images" id="restarunatWriteImg" multiple="multiple"/></td>
 	</tr>
 	<tr>
 		<th class="restaurantWriteHead"></th>
@@ -178,12 +184,15 @@
 //header 카테고리 선택유지
 $('#go_rest').css('box-shadow','#95df95 0px 2px 0px 0px');
 
-var imgArr= [];
 var $restaurantImg_upload = document.getElementById('restaurantImg_upload');
-
+var $restaurantImg_cnt = document.getElementById('restaurantImg_cnt');
+var uploadImages = [];
 $('#restarunatWriteImg').on('change',function(){
 	//console.log("img change 감지");
-	var uploadImages = $('#restarunatWriteImg')[0].files;
+	for(var e of $('#restarunatWriteImg')[0].files){
+		uploadImages.push(e);
+	}
+	//console.log(uploadImages);
 	upload(uploadImages);
 });
 
@@ -191,12 +200,9 @@ function upload(uploadImages){
 	//console.log('upload 펑션 시작');
 	//console.log(uploadImages);
 	$restaurantImg_upload.innerHTML = '';
-	imgArr= [];
-	var imageType = 'image';
+	$restaurantImg_cnt.innerHTML = '이미지 ' + uploadImages.length + '개 등록';
 	for(var i = 0; i < uploadImages.length; i++){
-		var imgFile = uploadImages[i];
-		imgArr.push(imgFile);
-
+		var imgFile = uploadImages[i]
 		if(imgFile.type.includes('image')){
 			var divTag = document.createElement('div');
 			divTag.id = 'img_id_'+i;
@@ -237,12 +243,12 @@ function upload(uploadImages){
 
 function delImg(e){
 	var idx = e.id[e.id.length -1];
-	imgArr.splice(idx,1);
+	uploadImages.splice(idx,1);
 	//console.log('해당 이미지 삭제');
 	//console.log(imgArr);
 	var dataTranster = new DataTransfer();
-	for(var i = 0; i < imgArr.length; i++){
-		dataTranster.items.add(imgArr[i]);
+	for(var i = 0; i < uploadImages.length; i++){
+		dataTranster.items.add(uploadImages[i]);
 	}
 	$('#restarunatWriteImg')[0].files = dataTranster.files;
 	//console.log($('#restarunatWriteImg')[0].files);

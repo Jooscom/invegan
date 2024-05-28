@@ -60,10 +60,9 @@ public class RestaurantController {
 			pages = service.restaurantList_admin_totalpage();		
 		}
 		
-		if(page > pages) {
-			page = pages;
+		if(page > pages) { // 페이징 처리
+			page = pages; // page : 현재 페이지 번호, pages : 식당 리스트 총 페이지 수
 		}
-		
 		if(loginInfo == null) {// 비로그인
 			restaurantList = service.restaurantList_user(page, userLat,userLng);
 		}else if(loginInfo.getIs_admin() == 0){// 일반 회원
